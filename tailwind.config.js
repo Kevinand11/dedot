@@ -8,7 +8,9 @@ module.exports = {
 			colors: {
 				greenD: '#D2F2C685',
 				greenL: '#E3FFDC',
-				gold: '#F8BF27'
+				gold: '#F8BF27',
+				black: '#111111',
+				white: '#FFFFFF'
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif']

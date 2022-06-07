@@ -8,6 +8,7 @@ module.exports = {
 		'@vue/typescript/recommended'
 	],
 	rules: {
-		'@typescript-eslint/ban-ts-comment': 'off'
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'vue/multi-word-component-names': 'off'
 	}
 }

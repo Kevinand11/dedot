@@ -1,5 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+$spacers: (
+        0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14,
+        16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96
+);
+$grid-breakpoints: (
+        '': 0,
+        'sm:': '640px',
+        'md:': '768px',
+        'lg:': '1280px',
+        'xl:': '1420px',
+        '2xl:': '1536px'
+);
+
+@each $key in $spacers {
+  @each $bp, $width in $grid-breakpoints {
+    body[data-no-gap='true'] *[class*="#{$bp}gap-#{$key}"] {
+      @media (min-width: $width) {
+        gap: 0 !important;
+
+        & > *:not(:only-child) {
+          margin: calc(#{$key}px) !important;
+        }
+      }
+    }
+  }
+}
