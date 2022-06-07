@@ -3,7 +3,21 @@
 @tailwind utilities;
 
 @layer utilities {
+    html {
+        @apply text-[13.5px] lg:text-[16px];
+    }
+
     #app {
-        @apply bg-white text-black font-poppins
+        @apply bg-white text-black font-poppins;
+    }
+
+    h1 {
+        @apply text-[2.5rem] lg:text-[4rem];
+        line-height: 1.4em !important;
+    }
+
+    h2 {
+        @apply text-[1.8rem] lg:text-[2.5rem];
+        line-height: 1.4em !important;
     }
 }

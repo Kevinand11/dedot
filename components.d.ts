@@ -5,6 +5,9 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    About: typeof import('./src/components/About.vue')['default']
+    ContactHero: typeof import('./src/components/ContactHero.vue')['default']
+    HomeHero: typeof import('./src/components/HomeHero.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopNavigation: typeof import('./src/components/TopNavigation.vue')['default']
