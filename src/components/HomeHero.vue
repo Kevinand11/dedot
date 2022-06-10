@@ -29,19 +29,5 @@
 <style lang="scss">
   .hero {
     background: conic-gradient(from 202.02deg at 67.6% 56.47%, $color-greenD 0deg, $color-greenL 85.4deg, $color-greenD 360deg);
-
-    button {
-      font-size: inherit;
-      font-weight: 500;
-      min-width: 150px;
-      border: 2px solid $color-gold;
-      padding: 1rem 0.5rem;
-      border-radius: 8px;
-
-      @media (min-width: $lg) {
-        min-width: 300px;
-        border: 4px solid $color-gold;
-      }
-    }
   }
 </style>
