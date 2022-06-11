@@ -13,10 +13,8 @@
 						class="hidden lg:inline text-lg">We’re always there to help regardless the number of queries at hand.</span>
 				</div>
 				<div class="lg:flex-grow w-full flex justify-center">
-					<img alt="" class="w-[65%]" src="@/assets/images/heroes/contact.svg">
+					<img alt="" class="w-[65%]" src="@/assets/images/heroes/cards.svg">
 				</div>
-				<span
-					class="lg:hidden w-[60%] text-center text-lg">We’re always there to help regardless the number of queries at hand.</span>
 			</div>
 			<Wave />
 		</div>
