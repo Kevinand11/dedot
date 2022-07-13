@@ -4,9 +4,9 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite",
-		"build": "vue-tsc --noEmit && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
-		"lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+		"lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src && vue-tsc --noEmit",
 		"gen-data": "node scripts/parse.js"
 	},
 	"dependencies": {

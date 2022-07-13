@@ -17,7 +17,7 @@
 		</div>
 		<div v-if="show" class="lg:hidden flex flex-col gap-8 fixed inset-y-0 inset-x-0 p-8 bg-white">
 			<span class="text-3xl lg:hidden ml-auto" @click="show = !show">{{ show ? '&times;' : '&#9776;' }}</span>
-			<router-link v-for="{ name, route, special } in routes" :class="{special}"
+			<router-link v-for="{ name, route, special } in routes" :key="route" :class="{special}"
 			             :to="route" class="capitalize flex flex-col gap-1 font-bold w-full items-end"
 			             exact-active-class="nav-link-active" @click="show = false">
 				<span>{{ name }}</span>
