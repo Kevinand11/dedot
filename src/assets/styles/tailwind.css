@@ -37,4 +37,12 @@
         font-weight: 500;
         border-radius: 8px;
     }
+
+    .tags {
+        @apply flex flex-wrap gap-2 items-center leading-none;
+    }
+
+    .tag {
+        @apply rounded-lg py-1 px-2 bg-[#EDF1F7] text-sm;
+    }
 }

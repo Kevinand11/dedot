@@ -27,10 +27,12 @@ const getCryptos = (table) => {
 		const range = getRange(nodes[3].innerText)
 		return {
 			title: capitalize(title),
-			code,
-			price: isNaN(price) ? 0 : price,
-			perChange: isNaN(perChange) ? 0 : perChange,
-			range
+			range,
+			data: {
+				code,
+				price: isNaN(price) ? 0 : price,
+				perChange: isNaN(perChange) ? 0 : perChange
+			}
 		}
 	})
 }
@@ -46,10 +48,12 @@ const getFunds = (table) => {
 
 		return {
 			title: capitalize(title),
-			description,
-			image,
-			tags,
-			range
+			range,
+			data: {
+				description,
+				image,
+				tags
+			}
 		}
 	})
 }
@@ -62,16 +66,19 @@ const getCards = (table) => {
 		const description = tr?.querySelectorAll('p')[0]?.innerText ?? ''
 
 		const nodes = row.querySelectorAll('td')
-		const form = nodes[0].innerText
+		const form = nodes[0].querySelector('p')?.innerText ?? ''
+		const tags = nodes[0].querySelectorAll('span').map((span) => span.innerText.toLowerCase())
 		const country = nodes[1].innerText
 		const range = getRange(nodes[2].innerText)
 
 		return {
 			title: capitalize(title),
-			description,
-			image,
-			form: form.toLowerCase(),
-			country,
+			data: {
+				description,
+				image,
+				form: form.toLowerCase(),
+				country, tags
+			},
 			range
 		}
 	})
@@ -82,14 +89,17 @@ const getCards = (table) => {
 		return {
 			...card,
 			title: cards[index].title,
-			description: cards[index].description,
-			image: cards[index].image
+			data: {
+				...card.data,
+				description: cards[index].description,
+				image: cards[index].image
+			}
 		}
 	})
 }
 
 const getContent = () => {
-	const content = fs.readFileSync('scripts/crypto.html')
+	const content = fs.readFileSync('scripts/crypto.html').toString()
 	const root = HTMLParser.parse(content)
 	const tables = root.querySelectorAll('table')
 	if (tables.length !== 3) throw new Error('More than 3 tables. Recheck html page')
@@ -101,4 +111,4 @@ const getContent = () => {
 	}
 }
 
-fs.writeFileSync('public/trades.json', JSON.stringify(getContent(), null, 4))
+fs.writeFileSync('src/utils/trades.json', JSON.stringify(getContent(), null, 4))

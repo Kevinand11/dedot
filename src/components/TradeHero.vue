@@ -13,7 +13,7 @@
 						class="hidden lg:inline text-lg">We’re always there to help regardless the number of queries at hand.</span>
 				</div>
 				<div class="lg:flex-grow w-full flex justify-center">
-					<img alt="" class="w-[65%]" src="@/assets/images/heroes/cards.svg">
+					<img alt="" class="lg:w-[65%]" src="@/assets/images/heroes/cards.svg">
 				</div>
 			</div>
 			<Wave />

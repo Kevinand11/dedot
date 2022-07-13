@@ -7,14 +7,18 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     About: typeof import('./src/components/About.vue')['default']
     BottomNavigation: typeof import('./src/components/BottomNavigation.vue')['default']
+    CardsTrades: typeof import('./src/components/trades/CardsTrades.vue')['default']
     ContactForm: typeof import('./src/components/ContactForm.vue')['default']
     ContactHero: typeof import('./src/components/ContactHero.vue')['default']
+    CryptoTrades: typeof import('./src/components/trades/CryptoTrades.vue')['default']
+    FundsTrades: typeof import('./src/components/trades/FundsTrades.vue')['default']
     HomeHero: typeof import('./src/components/HomeHero.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Testimonials: typeof import('./src/components/Testimonials.vue')['default']
     TopNavigation: typeof import('./src/components/TopNavigation.vue')['default']
     TradeHero: typeof import('./src/components/TradeHero.vue')['default']
+    TradeList: typeof import('./src/components/trades/TradeList.vue')['default']
     Wave: typeof import('./src/components/Wave.vue')['default']
   }
 }

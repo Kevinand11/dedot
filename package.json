@@ -10,6 +10,7 @@
 		"gen-data": "node scripts/parse.js"
 	},
 	"dependencies": {
+		"axios": "^0.27.2",
 		"firebase": "^9.8.2",
 		"vue": "^3.2.25",
 		"vue-router": "4"

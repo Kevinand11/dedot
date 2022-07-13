@@ -56,10 +56,8 @@ export default defineComponent({
   }
 
   .special {
-    color: $color-gold;
     @media (min-width: $lg) {
       background: $color-gold;
-      color: unset;
       padding: .5rem 1rem;
       border-radius: 0.5rem;
     }
